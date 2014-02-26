@@ -117,16 +117,16 @@ function loadNodes(newClusterNodes, color,layerName) {
 
     });
     //console.log(app[layerName])
-    //app[layerName].sort(function(a, b){
-    //            alert('uff')
-    //            var nameA=a.toLowerCase(), nameB=b.toLowerCase();
-    //            
-    //            if (nameA < nameB) //sort string ascending
-    //                            return -1
-    //            if (nameA > nameB)
-    //                            return 1
-    //            return 0 //default return value (no sorting)
-    //            });
+    app[layerName].sort(function(a, b){
+                //console.log(a)
+                var nameA=a.name.toLowerCase(), nameB=b.name.toLowerCase();
+                
+                if (nameA < nameB) //sort string ascending
+                                return -1
+                if (nameA > nameB)
+                                return 1
+                return 0 //default return value (no sorting)
+                });
     return layer;
 }
 
@@ -158,7 +158,7 @@ function createNodeList() {
 
 function addToList(data) {
         //alert('test')
-        console.log(data)
+        //console.log(data)
         //$("#valori").html('');
         $("#nodelist").html('');
         //var nodes = data.features;
@@ -170,10 +170,18 @@ function addToList(data) {
         $("#nodelist").append(compiledTmpl);
         //
         $('a.list-link').click(function (e) {
+        console.log(app.currentMarker)
+        if (typeof(app.currentMarker) != 'undefined') {
+            map.removeLayer(app.currentMarker)
+        }
+        
         var layer = 'ProvinciaWiFi';
         var slug = $(this).data('slug');
         //console.log(app[layer])
         var marker = app[layer][slug].marker;
+        app.currentMarker =  marker
+        console.log(app.currentMarker)
+        
         var name = app[layer][slug].name;
         var address = app[layer][slug].data.address;
         var city = app[layer][slug].data.city;
@@ -182,8 +190,9 @@ function addToList(data) {
         //    //console.log(marker.toGeoJSON());
         //    populateNodeDiv(slug,"true");
         marker.addTo(map)
+        console.log(map)
         marker.bindPopup(name+'<br>'+address+'<br>'+city)
-        //    marker.bindPopup(nodeDiv)
+        //marker.bindPopup(nodeDiv)
         //    populateRating(slug,nodeDiv,nodeRatingAVG)
         marker.openPopup()
         })

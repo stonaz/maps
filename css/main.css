@@ -28,6 +28,8 @@
 	float: right;
 	background-color: #999;
 	margin-bottom: 10px;
+	word-wrap: normal;
+	width: 250px;
 }
 
 #content
