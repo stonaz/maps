@@ -1,0 +1,90 @@
+var examples = [
+        {
+          "url": "admr.nl.amsterdam/nodes?osm::tourism=museum",
+          "title": "Museums in Amsterdam"
+        },
+        {
+          "url": "nodes?311.helsinki::status=open",
+          "title": "Open service requests in Helsinki"
+        },
+        {
+          "url": "nodes?lat=52.090774&lon=5.121281&radius=10000&per_page=1000&osm::highway=motorway",
+          "title": "Highways in a 10km radius around Utrecht"
+        },
+        {
+          "url": "nodes?name=stedenroute&layer=osm",
+          "title": "Routes named \"Stedenroute\""
+        },       
+        {
+          "url": "nodes?per_page=250&layer=ns&bbox=53.579461,4.487915,52.069377,7.146606",
+          "title": "NS stations in the upper half of the Netherlands "
+        },          
+        {
+          "url": "admr.nl.zwolle/regions?admr::admn_level=4&layer=cbs&per_page=50",
+          "title": "Statistical data of all neighbourhoods in Zwolle"
+        },
+        {
+          "url": "admr.nl.groningen/regions?admr::admn_level=4&layer=rain",
+          "title": "Rain forecast per neighbourhood in Groningen"
+        },
+        {
+          "url": "admr.nl.amsterdam/ptstops?name=Leidseplein&layer=gtfs",
+          "title": "Public transport stops in Amsterdam named Leidseplein"
+        },
+        {
+          "url": "gtfs.stop.060671/select/ptlines",
+          "title": "Public transport lines that call at one of these stops"
+        },
+        {
+          "url": "routes?layer=divv.traffic&per_page=200",
+          "title": "Real time traffic flow on main roads in Amsterdam"
+        },
+        {
+          "url": "routes?contains=n726817991,n726817955,n726816865",
+          "title": "Routes containing a specific set of nodes"
+        },
+        {
+          "url": "r326516/select/nodes?osm::railway=tram_stop|halt&data_op=or",
+          "title": "Tram stops on Utrecht-IJsselstein tram route"
+        },
+        {
+          "url": "admr.nl.amsterdam/nodes?layer=artsholland",
+          "title": "Cultural events in Amsterdam for the next two weeks"
+        },
+        {
+          "url": "nodes?2cm.hmp::wegnummer=N200&per_page=300",
+          "title": "Highway location markers along the N200"
+        },
+        {
+          "url": "nodes?layer=divv.parking.buildings",
+          "title": "Public parking in Amsterdam"
+        },
+        {
+          "url": "admr.nl.amsterdam_stadsdeel_oost_oostelijk_havengebied/nodes?layer=bag.ligplaatsen",
+          "title": "Houseboat locations near our offices."
+        },
+        {
+          "url": "nodes?layer=bag.panden&lat=52.0936&lon=4.3451&per_page=100",
+          "title": "Buildings from near the Dutch Royal Palace"
+        },
+        {
+          "url": "n798432345/select/regions",
+          "title": "Administrative regions which contain the Olympic Stadium in Amsterdam"
+        },
+        {
+          "url": "admr.nl.alkmaar/nodes?layer=rce.rijksmonumenten",
+          "title": "Cultural heritage sites in Alkmaar"
+        },
+        {
+          "url": "nodes?layer=rce.rijksmonumenten,amsterdam.hotels,bag.vbo",
+          "title": "Hotels in Amsterdam that are also a cultural heritage site"
+        },
+        {
+          "url": "admr.nl.eindhoven/nodes?layer=nl.risicokaart.*",
+          "title": "Objects from the Risicokaart in the city of Eindhoven"
+        },
+        {
+          "url": "nodes?layer=rws.nap",
+          "title": "Waterlevels in millimeters above the Amsterdam Ordnance Datum"
+        }
+      ];

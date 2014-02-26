@@ -1,0 +1,47 @@
+.ZTL_night
+{
+    color:blue;
+}
+
+.nodes
+{  background-color:red;
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+    margin-top: 5px;
+    padding: 2px;
+    text-align: center;
+    vertical-align: middle;
+    font: 14px "Helvetica Neue", Arial, Helvetica, sans-serif;
+    border-radius: 20px;
+    }
+    
+#header
+{
+	height: 50px;
+	background-color: #666;
+	margin-bottom: 10px;
+}
+
+#nav
+{
+	float: right;
+	background-color: #999;
+	margin-bottom: 10px;
+}
+
+#content
+{
+	margin: 0 30px 10px 0px;
+        width: 850px;
+        height: 650px;
+	background-color: #999;
+}
+
+#footer
+{
+	clear: both;
+	height: 50px;
+	background-color: #666;
+	margin-bottom: 10px;
+}

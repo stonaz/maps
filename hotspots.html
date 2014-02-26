@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+	<!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+	<link rel="stylesheet" href="leaflet-0.7.2/leaflet.css" />
+	<link rel="stylesheet" href="css/main.css" />
+
+	<!--<link rel="stylesheet" href="leafletMarkerCluster/MarkerCluster.Default.css" />-->
+	
+	<!--[if lte IE 8]><link rel="stylesheet" href="leaflet-0.7.2/leaflet.ie.css" /><![endif]-->
+</head>
+<body>
+	<div id="header">Hotspots provincia di Roma</div>
+	<div id="nav">
+		<select id="selectLayer" onchange="createNodeList()">
+		<option value="">Choose Layer</option>	
+		<option value="ProvinciaWiFi">ProvinciaWiFi</option>	
+		</select>
+		<div id="nodelist"></div>
+	</div>
+	<div id="content">
+	<div id="map" style="width: 800px; height: 600px"></div>	
+	</div>
+	
+<script id="tmplLayerList" type="text/template">
+<option value="<%= layer.slug %>"> <%= layer.name %>
+</option>
+</script>
+
+<script id="tmplNodelist" type="text/template">
+  <ul>Nodes found: <strong><%= nodes.length %></strong> 
+    <% for (var i = 0; i < nodes.length; i++) { %>
+      <% var node = nodes[i]; %>
+      <li>
+      <a href="#" class="list-link" data-slug='<%= i %>' ><%= node.name %></a>
+      </li>
+    <% } %>
+  </ul>
+</script>
+
+<script src="lib/jquery-1.9.1.min.js"></script>
+<script src="lib/underscore.js"></script>
+<script src="leaflet-0.7.2/leaflet.js"></script>
+<script src="leafletMarkerCluster/leaflet.markercluster.js"></script>
+<script src="leaflet-0.7.2/leaflet-pip.js"></script>
+<script src="js/hotspotsProvincia.js"></script>
+	
+</body>
+</html>
+
+
