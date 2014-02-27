@@ -30,7 +30,17 @@
 	margin-bottom: 10px;
 	word-wrap: normal;
 	width: 250px;
+	overflow: auto;
+	max-height: 500px;
 }
+
+#nav ul ,li
+    {
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+	font: 14px "Helvetica Neue", Arial, Helvetica, sans-serif;
+    }
 
 #content
 {

@@ -171,7 +171,7 @@ function addToList(data) {
         //
         $('a.list-link').click(function (e) {
         console.log(app.currentMarker)
-        if (typeof(app.currentMarker) != 'undefined') {
+        if (typeof(app.currentMarker) !== 'undefined') {
             map.removeLayer(app.currentMarker)
         }
         
